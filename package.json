@@ -1,0 +1,30 @@
+{
+  "name": "pgcmd",
+  "version": "1.0.0",
+  "description": "Run SQL queries against Postgres from the command line.",
+  "main": "pgcmd.js",
+  "dependencies": {
+    "pg": "7.12.1",
+    "yargs": "14.0.0"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "pgcmd": "./pgcmd.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soheilpro/pgcmd"
+  },
+  "keywords": [
+    "postgresql",
+    "postgres"
+  ],
+  "author": "Soheil Rashidi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soheilpro/pgcmd/issues"
+  }
+}
