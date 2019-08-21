@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { Client } = require('pg');
 
 const argv = require('yargs')
