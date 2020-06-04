@@ -4,7 +4,7 @@
   "description": "Run SQL queries against Postgres from the command line.",
   "main": "pgcmd.js",
   "dependencies": {
-    "pg": "7.12.1",
+    "pg": "8.2.1",
     "yargs": "14.0.0"
   },
   "preferGlobal": true,
