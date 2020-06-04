@@ -56,6 +56,7 @@ async function main() {
   }
   catch (error) {
     console.error(error);
+    process.exit(1);
   }
   finally {
     await client.end();
