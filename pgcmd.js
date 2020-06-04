@@ -55,6 +55,7 @@ async function main() {
     console.log(JSON.stringify(rows, null, 2));
   }
   catch (error) {
+    process.exitCode = 1;
     console.error(error);
   }
   finally {
