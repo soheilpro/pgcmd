@@ -4,6 +4,7 @@
   "description": "Run SQL queries against Postgres from the command line.",
   "main": "pgcmd.js",
   "dependencies": {
+    "csv-stringify": "5.5.0",
     "pg": "8.2.1",
     "yargs": "14.0.0"
   },
