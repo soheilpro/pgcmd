@@ -1,7 +1,7 @@
 # pgcmd
 Non-interactive PostgreSQL query tool.
 
-It outputs JSON which means you can process and view the results with tools like [jq](https://stedolan.github.io/jq/manual) or [catj](https://github.com/soheilpro/catj).
+By default, it outputs JSON which means that you can process and view the results with tools like [jq](https://stedolan.github.io/jq/manual) or [catj](https://github.com/soheilpro/catj).
 
 ## Install
 
@@ -46,6 +46,20 @@ Output:
 ]
 ```
 
+It can also output CSV:
+
+```
+pgcmd 'select * from pg_database' --csv
+```
+
+Output:
+```
+datname,datdba,encoding,datcollate,datctype,datistemplate,datallowconn,datconnlimit,datlastsysoid,datfrozenxid,datminmxid,dattablespace,datacl
+postgres,10,6,en_US.utf8,en_US.utf8,,1,-1,13066,562,1,1663,
+template1,10,6,en_US.utf8,en_US.utf8,1,1,-1,13066,562,1,1663,"{=c/postgres,postgres=CTc/postgres}"
+template0,10,6,en_US.utf8,en_US.utf8,1,,-1,13066,562,1,1663,"{=c/postgres,postgres=CTc/postgres}"
+```
+
 ## Environment Variables
 The following environment variables are supported:
 - PGHOST
@@ -55,6 +69,10 @@ The following environment variables are supported:
 - PGDATABASE
 
 ## Version History
++ **1.1**
+  + Added `--csv` output option.
+  + Added support for Node 14. (Thanks [darky](https://github.com/darky))
+  + Set exit code on errors. (Thanks [darky](https://github.com/darky))
 + **1.0**
 	+ Initial release.
 
@@ -66,7 +84,7 @@ The following environment variables are supported:
 + http://github.com/soheilpro
 
 ## Copyright and License
-Copyright 2019 Soheil Rashidi.
+Copyright 2020 Soheil Rashidi.
 
 Licensed under the The MIT License (the "License");
 you may not use this work except in compliance with the License.
