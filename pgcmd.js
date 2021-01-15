@@ -60,6 +60,7 @@ async function main() {
         cast: {
           date: date => date.toISOString(),
         },
+        eof: false,
       }));
     }
     else {
