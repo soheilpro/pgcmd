@@ -69,6 +69,8 @@ The following environment variables are supported:
 - PGDATABASE
 
 ## Version History
++ **1.2**
+  + Removed the default timeout.
 + **1.1**
   + Added `--csv` output option.
   + Added support for Node 14. (Thanks [darky](https://github.com/darky))
